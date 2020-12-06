@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <androidx.cardview.widget.CardView
+    android:id="@+id/cv_product_detail_title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/colorGreen">
+
+        <ImageView
+            android:id="@+id/iv_product_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:tint="@color/colorWhite"
+            app:srcCompat="@drawable/back_icon"/>
+
+        <TextView
+            android:id="@+id/tv_product_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="18dp"
+            android:text="Product Details"/>
+
+        <ImageView
+            android:id="@+id/iv_product_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="right"
+            android:tint="@color/colorWhite"
+            app:srcCompat="@drawable/shopping_cart_icon"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:layout_below="@+id/cv_product_detail_title">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_product_detail_image"
+            android:layout_width="340dp"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            android:layout_centerHorizontal="true"
+           android:layout_marginTop="40dp"/>
+
+        <TextView
+            android:id="@+id/tv_product_detail_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_product_detail_image"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            android:text="Product Name" />
+
+        <TextView
+            android:id="@+id/tv_product_detail_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_product_detail_name"
+            android:text="Product Description"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:textSize="17dp"/>
+
+        <TextView
+            android:id="@+id/tv_product_rm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_product_detail_description"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:textSize="25dp"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:text="RM"/>
+
+        <TextView
+            android:id="@+id/tv_product_detail_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_product_detail_description"
+            android:layout_toRightOf="@id/tv_product_rm"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="20dp"
+            android:textSize="25dp"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:text="Price" />
+
+        <Button
+            android:id="@+id/btn_minus_quantity"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="50dp"
+            android:background="@color/colorGreen"
+            android:drawableTint="@color/colorWhite"
+            android:drawableLeft="@drawable/minus_icon"
+            android:paddingLeft="13dp"
+            android:layout_below="@id/tv_product_detail_price"/>
+
+        <Button
+            android:id="@+id/btn_quantity"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_below="@id/tv_product_detail_price"
+            android:layout_toRightOf="@id/btn_minus_quantity"
+            android:background="@color/colorWhite"
+            android:textSize="20dp"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/btn_add_quantity"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_toRightOf="@id/btn_quantity"
+            android:background="@color/colorGreen"
+            android:drawableTint="@color/colorWhite"
+            android:drawableLeft="@drawable/add_icon"
+            android:paddingLeft="13dp"
+            android:layout_below="@id/tv_product_detail_price"/>
+
+
+    </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_add_to_cart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorGreen"
+        android:textColor="@color/colorWhite"
+        android:paddingLeft="130dp"
+        android:paddingRight="130dp"
+        android:drawableLeft="@drawable/add_to_cart_icon"
+        android:drawableTint="@color/colorWhite"
+        android:text="Add to Cart"/>
+
+
+
+
+</RelativeLayout>

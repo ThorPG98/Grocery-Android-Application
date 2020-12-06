@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--<EditText-->
+        <!--android:id="@+id/et_home_search"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="45dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:drawablePadding="8dp"-->
+        <!--android:paddingLeft="12dp"-->
+        <!--android:background="@drawable/search_background"-->
+        <!--android:drawableTint="@color/colorPrimaryDark"-->
+        <!--android:drawableLeft="@drawable/search_icon"-->
+        <!--android:hint="Search" />-->
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/sv_home_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:queryHint="Search"
+        app:iconifiedByDefault="false"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" >
+
+    </androidx.appcompat.widget.SearchView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_category_selection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/sv_home_search">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rv_category_selection">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.denzcoskun.imageslider.ImageSlider
+                android:id="@+id/vp_board"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                app:auto_cycle="true"
+                app:delay="30"
+                app:period="1000"
+                app:corner_radius="0"
+                app:placeholder="@drawable/board1"
+                app:error_image="@drawable/board1"
+                android:layout_marginTop="10dp">
+            </com.denzcoskun.imageslider.ImageSlider>
+
+            <TextView
+                android:id="@+id/tv_featured_products"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vp_board"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="16dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="Featured Products"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_product"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_featured_products">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

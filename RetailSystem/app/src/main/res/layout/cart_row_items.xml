@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    app:cardElevation="7dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+
+        <ImageView
+            android:id="@+id/iv_cart_img"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:layout_marginLeft="16dp"
+            android:background="@drawable/add_icon"/>
+
+        <TextView
+            android:id="@+id/tv_cart_product_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/iv_cart_img"
+            android:textColor="@color/colorBlack"
+            android:textSize="18dp"
+            android:text="Product Name"/>
+
+        <TextView
+            android:id="@+id/tv_cart_product_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/iv_cart_img"
+            android:layout_below="@id/tv_cart_product_name"
+            android:text="Id"/>
+
+        <TextView
+            android:id="@+id/tv_cart_product_quantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/iv_cart_img"
+            android:layout_below="@id/tv_cart_product_id"
+            android:text="Quantity" />
+
+        <TextView
+            android:id="@+id/tv_cart_product_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/iv_cart_img"
+            android:layout_marginTop="2dp"
+            android:layout_below="@id/tv_cart_product_quantity"
+            android:textSize="15dp"
+            android:text="Price"/>
+
+        <TextView
+            android:id="@+id/tv_cart_product_total_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:gravity="right"
+            android:layout_below="@id/tv_cart_product_quantity"
+            android:textSize="18dp"
+            android:textColor="@color/colorBlack"
+            android:text="Total Price"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

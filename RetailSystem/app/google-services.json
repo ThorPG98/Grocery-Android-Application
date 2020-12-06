@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "600813985285",
+    "firebase_url": "https://retailsystem-2bae2.firebaseio.com",
+    "project_id": "retailsystem-2bae2",
+    "storage_bucket": "retailsystem-2bae2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:600813985285:android:5b55f3c3a08a71be7b066c",
+        "android_client_info": {
+          "package_name": "com.example.bacon.retailsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "600813985285-cjn9i4671crli02l461fkmp6fbchcrl4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bacon.retailsystem",
+            "certificate_hash": "215905e28b12b09d55b77d4c090cd01c327dfb16"
+          }
+        },
+        {
+          "client_id": "600813985285-i5uub9vmsefrfrl5s0kv6kpp4rq7956v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9K9ejzp-OdqFPa-hT4Dxv5rI2gEsdZpE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "600813985285-i5uub9vmsefrfrl5s0kv6kpp4rq7956v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
